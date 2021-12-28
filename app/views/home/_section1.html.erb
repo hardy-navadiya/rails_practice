@@ -1,0 +1,52 @@
+<div class="sec1_heading">Click here to show section1....</div>
+<br>
+<div class="hide_sec1">
+	<div class="container">
+	  <div class="row">
+	    <div class="col">
+	      <div class="card" style="width: 18rem;">
+				  <img src="http://www.goodmorningimagesdownload.com/wp-content/uploads/2021/02/Nature-Whatsapp-Dp-Download.jpg" class="card-img-top" alt="...">
+				  <div class="card-body">
+				    <h5 class="card-title">Card title</h5>
+				    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				    <a href="#" class="btn btn-primary">Go somewhere</a>
+				  </div>
+				</div>
+	    </div>
+	    <div class="col">
+	      <div class="card" style="width: 18rem;">
+				  <img src="http://www.goodmorningimagesdownload.com/wp-content/uploads/2021/02/Nature-Whatsapp-Dp-Download.jpg" class="card-img-top" alt="...">
+				  <div class="card-body">
+				    <h5 class="card-title">Card title</h5>
+				    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				    <a href="#" class="btn btn-primary">Go somewhere</a>
+				  </div>
+				</div>
+	    </div>
+	    <div class="col">
+	      <div class="card" style="width: 18rem;">
+				  <img src="http://www.goodmorningimagesdownload.com/wp-content/uploads/2021/02/Nature-Whatsapp-Dp-Download.jpg" class="card-img-top" alt="...">
+				  <div class="card-body">
+				    <h5 class="card-title">Card title</h5>
+				    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				    <a href="#" class="btn btn-primary">Go somewhere</a>
+				  </div>
+				</div>
+	    </div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(".hide_sec1").hide();
+
+		$(".sec1_heading").click(function(){
+			$(".hide_sec1").slideToggle("slow");
+			$(".hide_sec1").animate({opacity:'0.7'},"slow");
+		})
+
+		$(".hide_sec1").click(function(){
+			$(".hide_sec1").slideUp("slow");
+		})
+	})
+</script>
