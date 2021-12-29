@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   get 'signup' => 'users#new'
 
   root 'home#index'
+
+  resources :users
 end
