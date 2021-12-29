@@ -1,2 +1,114 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<div class="sec2_heading">Table</div>
+<div>
+	<form class="sec2_p"> 
+		<div class="input-group mb-3">
+		  <div class="input-group-prepend">
+		    <span class="input-group-text" id="basic-addon1">search</span>
+		  </div>
+		  <input type="text" class="form-control" placeholder="Username" id="myInput">
+		</div>
+	  <table class="table" id="myTable"> 
+		  <thead>
+		    <tr>
+		      <th scope="col">#</th>
+		      <th scope="col">First</th>
+		      <th scope="col">Last</th>
+		      <th scope="col">Handle</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr>
+		      <th scope="row">1</th>
+		      <td>Mark</td>
+		      <td>Otto</td>
+		      <td>@mdo</td>
+		    </tr>
+		    <tr>
+		      <th scope="row">2</th>
+		      <td>Jacob</td>
+		      <td>Thornton</td>
+		      <td>@fat</td>
+		    </tr>
+		    <tr>
+		      <th scope="row">3</th>
+		      <td>Larry</td>
+		      <td>the Bird</td>
+		      <td>@twitter</td>
+		    </tr>
+		  </tbody>
+		</table>
+
+	</form>
+</div>
+
+<div class="sec1_heading">Click here to show section1....</div>
+<br>
+<div class="hide_sec1">
+	<div class="container">
+	  <div class="row">
+	    <div class="col">
+	      <div class="card" style="width: 18rem;">
+				  <img src="http://www.goodmorningimagesdownload.com/wp-content/uploads/2021/02/Nature-Whatsapp-Dp-Download.jpg" class="card-img-top" alt="...">
+				  <div class="card-body">
+				    <h5 class="card-title">Card title</h5>
+				    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				    <a href="#" class="btn btn-primary">Go somewhere</a>
+				  </div>
+				</div>
+	    </div>
+	    <div class="col">
+	      <div class="card" style="width: 18rem;">
+				  <img src="http://www.goodmorningimagesdownload.com/wp-content/uploads/2021/02/Nature-Whatsapp-Dp-Download.jpg" class="card-img-top" alt="...">
+				  <div class="card-body">
+				    <h5 class="card-title">Card title</h5>
+				    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				    <a href="#" class="btn btn-primary">Go somewhere</a>
+				  </div>
+				</div>
+	    </div>
+	    <div class="col">
+	      <div class="card" style="width: 18rem;">
+				  <img src="http://www.goodmorningimagesdownload.com/wp-content/uploads/2021/02/Nature-Whatsapp-Dp-Download.jpg" class="card-img-top" alt="...">
+				  <div class="card-body">
+				    <h5 class="card-title">Card title</h5>
+				    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				    <a href="#" class="btn btn-primary">Go somewhere</a>
+				  </div>
+				</div>
+	    </div>
+	</div>
+</div>
+
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(".hide_sec1").hide();
+
+		$(".sec1_heading").click(function(){
+			$(".hide_sec1").slideToggle("slow");
+			$(".hide_sec1").animate({opacity:'0.7'},"slow");
+		})
+
+		$(".hide_sec1").click(function(){
+			$(".hide_sec1").slideUp("slow");
+		})
+	})
+
+	$(document).ready(function(){
+		$('.sec2_p').hide();
+		$('.sec2_heading').click(function(){
+			$('.sec2_p').slideDown(1000);
+		})
+
+		$('button').click(function(){
+			$("#exampleInputEmail1").val("email Please");
+		})
+
+		$("#myInput").on("keyup", function() {
+	    var value = $(this).val().toLowerCase();
+	    $("#myTable tr").filter(function() {
+	      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+	    });
+	  });
+	})
+</script>
