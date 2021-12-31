@@ -1,2 +1,3 @@
-<%= @user.name %>,<%= @user.email %>,
-<%= gravatar @user %>
+<% if @user %>
+	logged in as.. <%= @user.email %>
+<% end %>
